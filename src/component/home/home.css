@@ -37,6 +37,11 @@
 }
 
 
+.home {
+    background: url(./../../assets/bg3.jpg);
+
+}
+
 .home_container {
     row-gap: 9rem;
 }
@@ -186,7 +191,7 @@
     background: rgb(56, 137, 243);
     display: flex;
     flex-direction: row;
-     padding-top: 12px;
+    padding-top: 12px;
     padding-bottom: 12px;
 }
 
