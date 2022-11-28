@@ -1,0 +1,51 @@
+.footer {
+    background-color: rgb(110, 110, 255);
+    color: black;
+}
+
+.footer_container {
+    padding: 2rem 0 6rem;
+    text-align: center;
+}
+
+.footer_title,
+.footer_link {
+    color: black;
+    margin-bottom: 2.5rem;
+}
+
+.footer_link:hover {
+    color: white;
+}
+
+.footer_list {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.f1{
+color: rgb(0, 0, 0);
+
+}
+
+.footer_social{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    
+}
+
+.footer_copy{
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
+.contact_hr{
+    width: 100%;
+    border-color: rgb(112, 112, 112);
+    
+}
+
+
