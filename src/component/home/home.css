@@ -185,7 +185,6 @@
     position: relative;
     width: 30%;
     padding: 1em;
-    /* margin: 1em ; */
     padding-right: 6rem;
     color: #fff;
     background: rgb(56, 137, 243);
@@ -253,10 +252,9 @@
     }
 
     .home_img {
-        /* position: relative; */
         order: initial;
         justify-self: initial;
-        /* right: 50%; */
+       
     }
 
     .home_data {

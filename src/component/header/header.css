@@ -74,7 +74,6 @@
 .active-link,
 .nav_link:hover{
     color: rgb(110, 110, 255);
-    /* box-shadow: -3px -3px 7px inset #ffffff73,3px 3px 5px inset rgba(94,104,121,.288); */   
 }
 
 .nav-apps:hover{
@@ -119,6 +118,8 @@
         border-radius: 1.6rem 1.6rem 0 0;  
         transition: .4s;
     }
+
+
 /* show Menu */
     .show-menu{
         bottom:0;
@@ -157,11 +158,10 @@
     .nav_icon,
     .nav_close,
     .nav_togle{
-        /* display: block;
-        align-items: center; */
         display: block;
     }
 }
+
 
 /* For small devices */
 @media screen and (max-width:375px) {

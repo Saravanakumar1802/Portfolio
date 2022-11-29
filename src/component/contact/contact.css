@@ -63,12 +63,18 @@
 
 .contact_icon {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
 }
 
-.whatsapp_icon {}
+.whatsapp_icon {
+     color:rgb(34, 255, 0);  
+}
 
-.email_icon {}
+.email_icon {
+    width: 282px;
+    height: 25px;
+    margin-bottom: 1rem;    
+}
 
 
 .contact_option a {
