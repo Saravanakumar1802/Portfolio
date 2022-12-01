@@ -12,7 +12,7 @@ const Social = () => {
         <i className="uil uil-github github icon_size"></i>
       </a>
 
-      <a href="Javascript(void)" className="home_social-icon" target='_blank' >
+      <a href="Javascript(void)" className="home_social-icon" rel="noreferrer" target='_blank' >
         <i className="uil uil-linkedin linked_in icon_size"></i>
       </a>
 
