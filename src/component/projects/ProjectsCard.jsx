@@ -3,16 +3,18 @@ import './projects.css';
 
 const ProjectsCard = (props) => {
     return (
-
         <div className="project-container project-card">
+            <h3 className="project-title">{props.data.projectTitle}</h3>
             <img
                 src={props.data.image}
                 alt="Project_Image"
                 loading="lazy"
                 className="project-pic"
             />
-            <h3 className="project-title">{props.data.projectTitle}</h3>
-            <p className="project-details">{props.data.content}</p>
+            
+           
+
+            
 
             <div className="project_links">
                 <a href={props.data.netify} target="_blank" rel="noreferrer" className="project-link">Demo
@@ -22,7 +24,6 @@ const ProjectsCard = (props) => {
                     <i className="project_github uil uil-github"></i>
                 </a>
             </div>
-
         </div>
     )
 }

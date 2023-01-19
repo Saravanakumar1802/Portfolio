@@ -18,11 +18,19 @@
     content: "";
     position: absolute;
     display: block;
-    left: 44.6%;
-    width: 10%;
+    left: 47.6%;
+    width: 5%;
     height: 6px;
     border-radius: 5px;
-    background-color: rgb(110, 110, 255);
+    background-color: #3586FF;
+    margin-top: 3px;
+}
+
+h5 {
+    color: #757575;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
 }
 
 .projects {
@@ -35,7 +43,7 @@
 
 .project-pic {
     width: 100%;
-    height: 40%;
+    height: 65%;
 }
 
 .projects-containers {
@@ -49,7 +57,7 @@
 
 .project-container {
     text-align: center;
-    width: 20.875rem;
+    width: 21rem;
     padding: 1rem;
 }
 
@@ -64,10 +72,12 @@
 
 .project-title {
     margin-bottom: var(--bottom-margin);
+    box-shadow: 2px 2px 2px 0 rgb(0, 0, 0);
 }
 
-.project-details {
-    margin-bottom: var(--bottom-margin);
+.pro-titleh5 {
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .project-card {
@@ -85,8 +95,8 @@
 
 .project-link {
     background-image: linear-gradient(to right,
-            rgb(108, 140, 255),
-            #5487ec 50%,
+            #3586FF,
+            #1b61eb 50%,
             #000 50%);
     background-size: 200% 100%;
     background-position: -100%;
@@ -100,7 +110,7 @@
 
 .project-link:before {
     content: '';
-    background: rgb(108, 140, 255);
+    background: #3586FF;
     display: block;
     position: absolute;
     bottom: -3px;
@@ -121,7 +131,6 @@
 .project-title {
     color: rgb(55, 55, 55);
 }
-
 
 
 /* Large Screen */

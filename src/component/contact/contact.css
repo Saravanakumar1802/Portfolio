@@ -23,7 +23,7 @@
     width: 2%;
     height: 6px;
     border-radius: 5px;
-    background-color: rgb(110, 110, 255);
+    background-color: #3586FF;
 
 }
 
@@ -53,7 +53,7 @@
     flex-direction: column;
     gap: 3px;
     color: rgb(53, 53, 53);
-    border-color: rgb(125, 125, 242);
+    border-color: #3586FF;
 }
 
 .contact_option:hover {
@@ -81,7 +81,7 @@
     margin-top: 0.7rem;
     display: inline-block;
     font-size: 0.8rem;
-    color: rgb(76, 76, 217);
+    color: #3586FF;
 }
 
 /* Form */
@@ -98,13 +98,11 @@ textarea {
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: rgb(244, 244, 244);
-    border: 2px solid rgb(144, 144, 243);
+    border: 2px solid #3586FF;
     resize: none;
-}
-.contact_button{
+    outline: none;
 
 }
-
 
 .contact_button {
     font-size: 16px;
@@ -117,13 +115,13 @@ textarea {
     position: relative;
     background-color: rgba(0, 0, 0, 0);
     user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
+    color: white;
   }
   
   .contact_button:after {
     content: "";
-    background-color: rgb(125, 125, 242);
+    background-color: #3586FF;
     width: 100%;
     z-index: -1;
     position: absolute;
@@ -138,19 +136,6 @@ textarea {
     left: 0px;
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

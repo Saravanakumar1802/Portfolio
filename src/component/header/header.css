@@ -73,11 +73,11 @@
 }
 .active-link,
 .nav_link:hover{
-    color: rgb(110, 110, 255);
+    color: #3586FF;
 }
 
 .nav-apps:hover{
-    color: rgb(108, 140, 255);
+    color: #609ffd;
 }
 
 .uil{

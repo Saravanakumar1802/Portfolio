@@ -5,7 +5,8 @@ const About = () => {
     return (
         <div className="about_container" id='about' >
             <div className="about">
-                <h1 className='abt_me'>About Me</h1>
+                <h1 className='abt_me'>My Skills</h1>
+
 
                 <div className="about_content"><p>My name is <span>Saravanakumar</span> and I have recently completed a Bachelor of Engineering, majoring in Computer Science at Anna University. I have a passion in <span>Frond-End developing</span>.I am
                     looking to join forces to grow my skill set while contributing to the positive outcome of making people

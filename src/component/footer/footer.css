@@ -1,10 +1,11 @@
 .footer {
-    background-color: rgb(110, 110, 255);
+    background-color: #3586FF;
     color: black;
+    margin-top: 13rem;
 }
 
 .footer_container {
-    padding: 2rem 0 6rem;
+    padding: 2rem 0 3rem;
     text-align: center;
 }
 
@@ -12,6 +13,7 @@
 .footer_link {
     color: black;
     margin-bottom: 2.5rem;
+    margin-top: 4rem;
 }
 
 .footer_link:hover {
@@ -22,30 +24,89 @@
     display: flex;
     justify-content: center;
     column-gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-.f1{
-color: rgb(0, 0, 0);
-
+    margin-bottom: 1rem;
 }
 
-.footer_social{
+.f1 {
+    color: rgb(0, 0, 0);
+}
+.f2:hover{
+color: black;
+}
+.f3_github:hover{
+    color: #FAFAFA;
+}
+.footer_social {
     display: flex;
     justify-content: center;
     column-gap: 1.25rem;
     margin-bottom: 2.5rem;
-    
+
 }
 
-.footer_copy{
+.footer_copy {
     display: block;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
 }
-.contact_hr{
+
+.contact_hr {
     width: 100%;
     border-color: rgb(112, 112, 112);
-    
+
 }
 
+footer .wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
 
+    background: #FAFAFA url(/src/assets/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    animation: animateWave2 3s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    animation: animateWave2 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave2 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
