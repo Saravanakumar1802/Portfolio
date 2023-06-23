@@ -3,7 +3,6 @@
     max-width: 1400px;
     margin: auto;
     margin-bottom: 5rem;
-
 }
 
 .contact_title_main {
@@ -67,13 +66,13 @@
 }
 
 .whatsapp_icon {
-     color:rgb(34, 255, 0);  
+    color: rgb(34, 255, 0);
 }
 
 .email_icon {
     width: 282px;
     height: 25px;
-    margin-bottom: 1rem;    
+    margin-bottom: 1rem;
 }
 
 
@@ -117,9 +116,9 @@ textarea {
     user-select: none;
     touch-action: manipulation;
     color: white;
-  }
-  
-  .contact_button:after {
+}
+
+.contact_button:after {
     content: "";
     background-color: #3586FF;
     width: 100%;
@@ -129,13 +128,13 @@ textarea {
     top: 7px;
     left: 7px;
     transition: 0.2s;
-  }
-  
-  .contact_button:hover:after {
+}
+
+.contact_button:hover:after {
     top: 0px;
     left: 0px;
-  }
-  
+}
+
 
 
 

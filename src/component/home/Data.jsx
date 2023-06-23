@@ -1,5 +1,5 @@
 import React from 'react'
-import myResume from '../../assets/Saravana-Cv.pdf';
+// import myResume from '../../assets/Saravana-Cv.pdf';
 import { Typewriter } from 'react-simple-typewriter'
 const Data = () => {
     return (
@@ -16,7 +16,7 @@ const Data = () => {
                         typeSpeed={70}
                         deleteSpeed={50}
                         delaySpeed={1000}
-                        words={[' Front-End Developer', ' Full Stack Developer']}
+                        words={[' Front-End Developer', ' MERN Stack Developer']}
                     />
                 </span>
             </h2>
@@ -25,9 +25,12 @@ const Data = () => {
             <p className="home_description">I'm creative Front-end Developer from india and
                 I'm very passionate and dedicated to my work.</p>
             <div className='button1'>
-                <a download='Saravana-Cv' href={myResume} className='btn_resume'>
-                    <button />Resume
-                    <i className='icon_resume uil uil-file-info-alt'></i>
+
+
+                <a download='Saravana-Cv' target="_blank" rel="noreferrer" href='https://drive.google.com/file/d/11xumYr3pWu_Kr1elseot6j9Yr8-j6Wbl/view?usp=sharing' className='resume-btn'>
+                    <div className="left"></div>
+                    Resume
+                    <div className="right"></div>
                 </a>
             </div>
 

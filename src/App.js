@@ -14,18 +14,13 @@ function App() {
       <Header />
 
       <main className='main'>
-
         <Home />
         <About />
         <Skills />
         <ProjectData />
         <Contact />
-        <Footer/>
-  
+        <Footer />
       </main>
-
-
-
 
     </>
   );

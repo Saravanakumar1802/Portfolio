@@ -191,7 +191,11 @@ img {
 }
 
 /* For medium devices */
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+    .section {
+        padding: 0 0 2rem;
+    }
+}
 
 /* For small devices */
 @media screen and (max-width:375px) {

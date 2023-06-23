@@ -1,6 +1,6 @@
 .about_container {
     text-align: center;
-    padding-top: 5rem;
+    padding: 5rem 0 6rem 0;
     max-width: 1400px;
     margin: auto;
 
@@ -10,6 +10,9 @@
     color: rgb(41, 41, 41);
     padding-bottom: 5rem;
     position: relative;
+}
+.abt_me span{
+    color: #3586FF;
 }
 
 .abt_me::after {

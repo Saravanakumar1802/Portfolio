@@ -212,6 +212,128 @@
     margin-top: 4rem;
 }
 
+
+
+
+/* ------------------------------------------------------------------- */
+
+.resume-btn {
+
+    position: relative;
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    font-family: "Source Code Pro";
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: #ffffff;
+
+    background-color: #3586FF;
+    box-shadow: hsla(226, 88%, 56%, 0.719) 2px 2px 22px;
+    border-radius: 4px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.resume-btn:focus {
+    outline-color: transparent;
+    box-shadow: hsl(210, 80%, 42%) 2px 2px 22px;
+}
+
+.resume-btn .right::after,
+.resume-btn::after {
+    content: var(--content);
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    padding: 40px 40px;
+    pointer-events: none;
+}
+
+.resume-btn::after {
+    font-weight: 200;
+    top: -30px;
+    left: -20px;
+}
+
+.right,
+.left {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.right {
+    left: 66%;
+}
+
+.left {
+    right: 66%;
+}
+
+.right::after {
+    top: -30px;
+    left: calc(-66% - 20px);
+
+    background-color: #141218;
+    color: transparent;
+    transition: transform .4s ease-out;
+    transform: translate(0, -90%) rotate(0deg)
+}
+
+.resume-btn :hover .right::after {
+    transform: translate(0, -47%) rotate(0deg)
+}
+
+.resume-btn .right:hover::after {
+    transform: translate(0, -50%) rotate(-7deg)
+}
+
+.resume-btn .left:hover~.right::after {
+    transform: translate(0, -50%) rotate(7deg)
+}
+
+/* bubbles */
+.resume-btn::before {
+    content: '';
+    pointer-events: none;
+    opacity: .6;
+    background:
+        radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, #ffffff 3px, #ffffff 4px, transparent 4px),
+        radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, #ffffff 3px, #ffffff 4px, transparent 4px),
+        radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, #ffffff 5px, #ffffff 6px, transparent 6px);
+
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(0, -66.666%);
+    }
+}
+
+
+
+
+
+
+
+
+
 /* Media Query*/
 /* large device */
 @media screen and (max-width:992px) {
@@ -281,22 +403,22 @@
         color: grey;
     }
 
-    .button1 {
+    /* .button1 {
         display: flex;
         justify-content: flex-start;
         margin: 0;
         padding-right: 20rem;
         margin-top: 4rem;
         margin-bottom: 4rem;
-    }
+    } */
 
-    .btn_resume {
+    /* .btn_resume {
         padding: 1em;
         padding-right: 0;
         color: #fff;
         background: rgb(56, 137, 243);
         box-sizing: border-box;
-    }
+    } */
 }
 
 /* small Screen */

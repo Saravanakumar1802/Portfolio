@@ -1,28 +1,25 @@
 import React from 'react';
 import './projects.css';
+import Button from 'react-bootstrap/Button';
 
-const ProjectsCard = (props) => {
+
+const ProjectsCard = ({ data }) => {
     return (
-        <div className="project-container project-card">
-            <h3 className="project-title">{props.data.projectTitle}</h3>
-            <img
-                src={props.data.image}
-                alt="Project_Image"
-                loading="lazy"
-                className="project-pic"
-            />
-            
-           
+        <div className="portfolio-box">
+            <img src={data.image} alt="project-pic" loading="lazy" className='project-img' />
+            <div className="portfolio-layer">
+                <h4>{data.projectTitle}</h4>
+                <p>{data.projectSummary}</p>
+                <Button variant="primary" size="sm" className='projects-link-btn'>
+                    <a href={data.netify} target="_blank" rel="noreferrer" className="project-link">Demo
+                        <i className="project_preview uil uil-arrow-up-right"></i>
+                    </a></Button> &nbsp;
 
-            
-
-            <div className="project_links">
-                <a href={props.data.netify} target="_blank" rel="noreferrer" className="project-link">Demo
-                    <i className="project_preview uil uil-arrow-up-right"></i>
-                </a>
-                <a href={props.data.github} target="_blank" rel="noreferrer" className="project-link">Source Code
-                    <i className="project_github uil uil-github"></i>
-                </a>
+                <Button variant="primary" size="sm" className='projects-link-btn'>
+                    <a href={data.github} target="_blank" rel="noreferrer" className="project-link">Code
+                        <i className="project_github uil uil-github"></i>
+                    </a>
+                </Button>
             </div>
         </div>
     )

@@ -24,25 +24,25 @@ const Footer = () => {
                     </li>
 
                     <li>
-                        <a href="#projects" className='footer_link'>Project</a>
+                        <a href="#portfolio" className='footer_link'>Project</a>
                     </li>
                 </ul>
 
                 <div className="footer_social">
 
-                    <a href="Javascript(void)" className="home_social-icon" target='_blank'>
+                    <a href="https://www.instagram.com/sk._.logan/" className="home_social-icon" rel="noreferrer" target='_blank'>
                         <i className="uil uil-instagram insta f1 icon_size"></i>
                     </a>
 
-                    <a href="Javascript(void)" className="home_social-icon" target='_blank'>
+                    <a href="https://www.linkedin.com/in/s-saravanakumar-27aa78268/" className="home_social-icon" rel="noreferrer" target='_blank'>
                         <i className="uil uil-linkedin linked_in f1 f2 icon_size"></i>
                     </a>
 
-                    <a href="Javascript(void)" className="home_social-icon" target='_blank'>
+                    <a href="https://twitter.com/SKLOGAN5" className="home_social-icon" rel="noreferrer" target='_blank'>
                         <i className="uil uil-twitter linked_in f1 f2 icon_size"></i>
                     </a>
 
-                    <a href="Javascript(void)" className="home_social-icon" target='_blank'>
+                    <a href="https://github.com/Saravanakumar1802" className="home_social-icon" rel="noreferrer" target='_blank'>
                         <i className="uil uil-github github  f1 f3_github icon_size"></i>
                     </a>
                 </div>
