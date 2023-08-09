@@ -1,7 +1,47 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './contact.css'
 
 const Contact = () => {
+  const form = useRef();
+
+  const notifySuccess = () => toast.success('Message Sent Successfully', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  });
+
+  const notifyError = () => toast.error('Message Not Sent', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  });
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_i4w2usm', 'template_kunr1eo', form.current, 'HvKK0Z6FbhX-0Fsu5')
+      .then((result) => {
+        console.log(result.text);
+        notifySuccess();
+        e.target.reset();
+      }, (error) => {
+        console.log(error.text);
+        notifyError();
+      });
+  };
   return (
     <section className='contact_main_container' id='contact'>
       <div className="contact_title_main">
@@ -26,12 +66,12 @@ const Contact = () => {
             <a href="https://wa.me/+918248463245 " rel="noreferrer" target="_blank">Send a message</a>
           </article>
         </div>
-        <form actions="">
-          <input type="text" name='name' placeholder='Your Name' required />
-          <input type="text" name='email' placeholder='Your Email' required />
-          <textarea name="Message" rows="6" placeholder='Your Message' required ></textarea>
-          <button type='submit' className='contact_button'>Send Message</button>
-
+        <form ref={form} onSubmit={sendEmail}>
+          <input type="text" name="user_name" placeholder='Your Name' required />
+          <input type="text" name="user_email" placeholder='Your Email' required />
+          <textarea name="message" rows="6" placeholder='Your Message' required ></textarea>
+          <button type='submit' value="Send" className='contact_button'>Send Message</button>
+          <ToastContainer />
         </form>
       </div>
     </section>
