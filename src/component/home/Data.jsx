@@ -27,7 +27,7 @@ const Data = () => {
             <div className='button1'>
 
 
-                <a download='Saravana-Cv' target="_blank" rel="noreferrer" href='https://drive.google.com/file/d/1P6sYS1vtpEG75hP9rqTBxgZaf4nDOg7s/view?usp=drive_link' className='resume-btn'>
+                <a download='Saravana-Cv' target="_blank" rel="noreferrer" href='https://drive.google.com/file/d/1xUmwvapTvcJzKwVE6ab3iHYKhjfyTduY/view?usp=drive_link' className='resume-btn'>
                     <div className="left"></div>
                     Resume
                     <div className="right"></div>
