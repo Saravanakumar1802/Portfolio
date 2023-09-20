@@ -328,12 +328,6 @@
 
 
 
-
-
-
-
-
-
 /* Media Query*/
 /* large device */
 @media screen and (max-width:992px) {
@@ -402,23 +396,6 @@
         font-size: 1.6rem;
         color: grey;
     }
-
-    /* .button1 {
-        display: flex;
-        justify-content: flex-start;
-        margin: 0;
-        padding-right: 20rem;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-    } */
-
-    /* .btn_resume {
-        padding: 1em;
-        padding-right: 0;
-        color: #fff;
-        background: rgb(56, 137, 243);
-        box-sizing: border-box;
-    } */
 }
 
 /* small Screen */

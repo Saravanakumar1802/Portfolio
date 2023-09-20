@@ -16,7 +16,7 @@ const ProjectData = () => {
         projectTitle: 'YouTube_Clone',
         projectSummary: 'This YouTube_Clone created using reactJs, nodejs, expressjs, MongoDb.',
         image: youtube,
-        github: 'https://github.com/Saravanakumar1802/Portfolio',
+        github: 'https://github.com/Saravanakumar1802/Youtube-Clone-Frontend',
         netify: 'https://youtube-clone-saravana.netlify.app/',
     },
     {
