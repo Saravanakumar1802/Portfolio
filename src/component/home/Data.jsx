@@ -16,13 +16,13 @@ const Data = () => {
                         typeSpeed={70}
                         deleteSpeed={50}
                         delaySpeed={1000}
-                        words={[' Front-End Developer', ' MERN Stack Developer']}
+                        words={[' MERN Stack Developer', ' Front-End Developer', 'Back-End Developer']}
                     />
                 </span>
             </h2>
 
 
-            <p className="home_description">I'm creative Front-end Developer from india and
+            <p className="home_description">I'm creative Full Stack Developer from india and
                 I'm very passionate and dedicated to my work.</p>
             <div className='button1'>
 
