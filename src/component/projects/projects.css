@@ -53,7 +53,7 @@
 }
 
 .portfoilo h2 {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 
 .portfolio-container {
@@ -67,6 +67,7 @@
 
 .portfolio-container .portfolio-box {
     position: relative;
+
     border-radius: 2rem;
     box-shadow: 0 0 1rem rgb(93, 93, 93);
     overflow: hidden;
@@ -75,7 +76,7 @@
 }
 
 .portfolio-box .project-img {
-    /* object-fit: cover; */
+    object-fit:cover;
     width: 100%;
     transition: .6s ease;
     height: 16rem;
@@ -139,6 +140,104 @@
     background-color: #d8d8d8;
 }
 
+
+/* Carousel project */
+
+
+.project p {
+    color: #ffffff;
+}
+
+.project .nav.nav-pills {
+    width: 42%;
+    margin: 0 auto;
+    margin-bottom: 7rem;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.885);
+    overflow: hidden;
+}
+
+/* .project .nav.nav-pills .nav-item {
+    width: 33.33333%;
+  } */
+.project .nav.nav-pills .nav-link {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 72.8px;
+    color: #fff;
+    width: 100%;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    z-index: 0;
+}
+
+.project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+}
+
+.project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.nav-link#projects-tabs-tab-first {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 55px 0px 0px 55px;
+}
+
+.nav-link#projects-tabs-tab-second {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-link#projects-tabs-tab-third {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0 55px 55px 0;
+}
+
+.tab-content>.tab-pane {
+    display: none;
+}
+
+.tab-content>.active {
+    display: block;
+}
+
+
+.fade:not(.show) {
+    opacity: 0;
+}
+
+div.row {
+    display: block;
+}
+
+/* .fade {
+    transition: opacity .15s linear;
+} */
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+
 /* Media query */
 
 @media (max-width:1124px) {
@@ -156,6 +255,18 @@
         letter-spacing: 2px;
     }
 
+    .project .nav.nav-pills {
+        width: 37%;
+
+    }
+
+    .project .nav.nav-pills .nav-link {
+
+        padding: 35px;
+
+
+    }
+
 
 }
 
@@ -168,6 +279,18 @@
         font-size: 1.5rem;
         padding-top: 1rem;
         letter-spacing: 2px;
+    }
+
+    .project .nav.nav-pills {
+        width: 47%;
+
+    }
+
+    .project .nav.nav-pills .nav-link {
+
+        padding: 34px;
+        font-size: 15px;
+
     }
 }
 
@@ -191,5 +314,17 @@
     .portfolio-layer p {
         font-size: 0.9rem;
         margin: .2rem 0 1rem;
+    }
+
+    .project .nav.nav-pills {
+        width: 80%;
+
+    }
+
+    .project .nav.nav-pills .nav-link {
+
+        padding: 23px;
+        font-size: 15px;
+
     }
 }
