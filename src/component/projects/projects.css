@@ -295,9 +295,17 @@ div.row {
 }
 
 @media (max-width:726px) {
+    .portfolio-box .project-img {
+        object-fit: cover;
+        width: 100%;
+        transition: .6s ease;
+        height: 14rem;
+        
+    }
+
     .portfolio-container {
         grid-template-columns: 1fr;
-        width: 23rem;
+        width: 21rem;
     }
 
     .heading::after {
@@ -326,5 +334,22 @@ div.row {
         padding: 23px;
         font-size: 15px;
 
+    }
+}
+
+@media (max-width:320px) {
+    .project .nav.nav-pills .nav-link {
+
+        padding: 21px;
+        font-size: 15px;
+
+    }
+    .project .nav.nav-pills {
+        width: 90%;
+
+    }
+    .portfolio-layer p {
+        font-size: 0.9rem;
+        margin: .2rem 0 1rem;
     }
 }

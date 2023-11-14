@@ -30,9 +30,9 @@ const Footer = () => {
 
                 <div className="footer_social">
 
-                    <a href="https://www.instagram.com/sk._.logan/" className="home_social-icon" rel="noreferrer" target='_blank'>
+                    {/* <a href="https://www.instagram.com/sk._.logan/" className="home_social-icon" rel="noreferrer" target='_blank'>
                         <i className="uil uil-instagram insta f1 icon_size"></i>
-                    </a>
+                    </a> */}
 
                     <a href="https://www.linkedin.com/in/s-saravanakumar-27aa78268/" className="home_social-icon" rel="noreferrer" target='_blank'>
                         <i className="uil uil-linkedin linked_in f1 f2 icon_size"></i>
