@@ -7,7 +7,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 
 //ProjectCard Pics
 import todoListProjectPic from "../../assets/todolist-mini-project.png"
-// import chatApp from "../../assets/chat app.png"
+import chatApp from "../../assets/chat app.png"
 // import pokemonApiProjectPic from "../../assets/pokemon-api.png"
 import gamingPageProjectPic from "../../assets/gaming-page.png"
 import portfoliopic from "../../assets/my_portfolio.png"
@@ -65,37 +65,37 @@ const ProjectData = () => {
         netify: 'https://link-tree-saravana.netlify.app/',
     },
 
-        // {
-        //     projectTitle: 'LetsChat App',
-        //     projectSummary: 'Created Chat App using react Js, react hooks, ChatEngine and FirebaseAuth',
-        //     image: chatApp,
-        //     github: 'https://github.com/Saravanakumar1802/Chat_App',
-        //     netify: 'https://movie-site-saravana.netlify.app/',
-        // },
-        // {
-        //     projectTitle: 'Pokemon Api',
-        //     projectSummary: 'Pokemon API using async/await, fetch and HTML, Css',
-        //     image: pokemonApiProjectPic,
-        //     github: 'https://github.com/Saravanakumar1802/Pokemon-API',
-        //     netify: 'https://pokemon-api-hackathon-b38.netlify.app/',
-        // }
+    {
+        projectTitle: 'LetsChat App',
+        projectSummary: 'Created Chat App using react Js, react hooks, ChatEngine and FirebaseAuth',
+        image: chatApp,
+        github: 'https://github.com/Saravanakumar1802/Chat_App',
+        netify: 'https://chat-app-saravana.netlify.app/',
+    },
+    // {
+    //     projectTitle: 'Pokemon Api',
+    //     projectSummary: 'Pokemon API using async/await, fetch and HTML, Css',
+    //     image: pokemonApiProjectPic,
+    //     github: 'https://github.com/Saravanakumar1802/Pokemon-API',
+    //     netify: 'https://pokemon-api-hackathon-b38.netlify.app/',
+    // }
+    {
+        projectTitle: 'Quote Generator API',
+        projectSummary: 'I created Quote API using HTML,CSS,Javascript',
+        image: QuoteGenerator,
+        github: 'https://github.com/Saravanakumar1802/Random_Quote_Generator',
+        netify: 'https://quote-generator-api-saravana.netlify.app/',
+    },
+    {
+
+        projectTitle: 'Money_Manager',
+        projectSummary: 'MERN stack Money manager App',
+        image: moneyManager,
+        github: 'https://github.com/Saravanakumar1802/Money-Manager-frontend',
+        netify: 'https://money-manager-app-saravana.netlify.app/',
+    },
     ]
     let card2 = [
-        {
-            projectTitle: 'Quote Generator API',
-            projectSummary: 'I created Quote API using HTML,CSS,Javascript',
-            image: QuoteGenerator,
-            github: 'https://github.com/Saravanakumar1802/Random_Quote_Generator',
-            netify: 'https://quote-generator-api-saravana.netlify.app/',
-        },
-        {
-
-            projectTitle: 'Money_Manager',
-            projectSummary: 'MERN stack Money manager App',
-            image: moneyManager,
-            github: 'https://github.com/Saravanakumar1802/Money-Manager-frontend',
-            netify: 'https://money-manager-app-saravana.netlify.app/',
-        },
         {
 
             projectTitle: 'Digital Clock',
