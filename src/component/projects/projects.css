@@ -76,7 +76,7 @@
 }
 
 .portfolio-box .project-img {
-    object-fit:cover;
+    object-fit: cover;
     width: 100%;
     transition: .6s ease;
     height: 16rem;
@@ -134,7 +134,9 @@
 .projects-link-btn {
     border-radius: 2rem;
     padding: 0 4px 0 4px;
+
 }
+
 
 .projects-link-btn:hover {
     background-color: #d8d8d8;
@@ -300,7 +302,7 @@ div.row {
         width: 100%;
         transition: .6s ease;
         height: 14rem;
-        
+
     }
 
     .portfolio-container {
@@ -344,10 +346,12 @@ div.row {
         font-size: 15px;
 
     }
+
     .project .nav.nav-pills {
         width: 90%;
 
     }
+
     .portfolio-layer p {
         font-size: 0.9rem;
         margin: .2rem 0 1rem;
