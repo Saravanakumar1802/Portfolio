@@ -11,7 +11,7 @@ const ProjectsCard = ({ data }) => {
                 <h4>{data.projectTitle}</h4>
                 <p>{data.projectSummary}</p>
                 <Button variant="primary" size="sm" className='projects-link-btn'>
-                    <a href={data.netify} target="_blank" rel="noreferrer" className="project-link">Demo
+                    <a href={data.netify} target="_blank" rel="noreferrer" className="project-link">&nbsp; Live
                         <i className="project_preview uil uil-arrow-up-right"></i>
                     </a></Button> &nbsp;
                 {data.githubServer ? <Button variant="primary" size="sm" className='projects-link-btn'>

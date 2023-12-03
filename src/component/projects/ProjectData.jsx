@@ -99,7 +99,7 @@ const ProjectData = () => {
     //     netify: 'https://pokemon-api-hackathon-b38.netlify.app/',
     // }
     {
-        projectTitle: 'Quote Generator API',
+        projectTitle: 'Quote Generator',
         projectSummary: 'I created Quote API using HTML,CSS,Javascript',
         image: QuoteGenerator,
         github: 'https://github.com/Saravanakumar1802/Random_Quote_Generator',

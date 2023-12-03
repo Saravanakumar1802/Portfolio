@@ -110,11 +110,13 @@
     font-size: 2rem;
     padding-top: 1rem;
     letter-spacing: 3px;
+    text-shadow: rgb(5, 126, 255) 2px 2px 6px;
 }
 
 .portfolio-layer p {
     font-size: 1.1rem;
     margin: .2rem 0 1rem;
+    text-shadow: black 2px 2px;
 }
 
 .portfolio-layer a {
@@ -123,6 +125,7 @@
     align-items: center;
     padding: 5px;
     color: #000000;
+    font-weight: bold;
 }
 
 .portfolio-layer a i {
