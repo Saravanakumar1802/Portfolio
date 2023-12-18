@@ -23,8 +23,8 @@ import bookApp from '../../assets/openBook.jpeg'
 
 const ProjectData = () => {
     let card = [{
-        projectTitle: 'YouTube_Clone',
-        projectSummary: 'This YouTube_Clone created using reactJs, nodejs, expressjs, MongoDb.',
+        projectTitle: 'Clip_Cloud App',
+        projectSummary: 'This Clip_Cloud App created using reactJs, nodejs, expressjs, MongoDb and Firebase.',
         image: youtube,
         github: 'https://github.com/Saravanakumar1802/Youtube-Clone-Frontend',
         githubServer: 'https://github.com/Saravanakumar1802/Youtube-Clone-Backend',
