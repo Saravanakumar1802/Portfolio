@@ -24,10 +24,9 @@ const Data = () => {
 
             <p className="home_description">I'm creative Full Stack Developer from india and
                 I'm very passionate and dedicated to my work.</p>
+            
             <div className='button1'>
-
-
-                <a download='Saravana-Cv' target="_blank" rel="noreferrer" href='https://drive.google.com/file/d/1CROrWhp9T2jrF2yhAHq4DZzl3IcvAMN1/view?usp=sharing' className='resume-btn'>
+                <a download='Saravana-Cv' target="_blank" rel="noreferrer" href='https://drive.google.com/file/d/1RLgaTTCl9QuFSZxiV360K7PnveYLhIh7/view?usp=sharing' className='resume-btn'>
                     <div className="left"></div>
                     Resume
                     <div className="right"></div>
