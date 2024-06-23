@@ -32,18 +32,22 @@ const Footer = () => {
 
                     {/* <a href="https://www.instagram.com/sk._.logan/" className="home_social-icon" rel="noreferrer" target='_blank'>
                         <i className="uil uil-instagram insta f1 icon_size"></i>
+                        // <img width="50" height="50" src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-new--v1"/>
                     </a> */}
 
                     <a href="https://www.linkedin.com/in/s-saravanakumar-27aa78268/" className="home_social-icon" rel="noreferrer" target='_blank'>
-                        <i className="uil uil-linkedin linked_in f1 f2 icon_size"></i>
+                        {/* <i className="uil uil-linkedin linked_in f1 f2 icon_size"></i> */}
+                        <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/linkedin.png" alt="linkedin" className='linked_in f1 f2 icon_size' />
                     </a>
 
                     <a href="https://twitter.com/SKLOGAN5" className="home_social-icon" rel="noreferrer" target='_blank'>
-                        <i className="uil uil-twitter linked_in f1 f2 icon_size"></i>
+                        {/* <i className="uil uil-twitter linked_in f1 f2 icon_size"></i> */}
+                        <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/twitter--v1.png" alt="twitter--v1" className='linked_in f1 f2 icon_size' />
                     </a>
 
                     <a href="https://github.com/Saravanakumar1802" className="home_social-icon" rel="noreferrer" target='_blank'>
-                        <i className="uil uil-github github  f1 f3_github icon_size"></i>
+                        {/* <i className="uil uil-github github  f1 f3_github icon_size"></i> */}
+                        <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" className='f1 f3_github icon_size' />
                     </a>
                 </div>
                 <hr className='contact_hr' />
