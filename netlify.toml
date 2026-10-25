@@ -2,6 +2,10 @@
   command = "npm run build"
   publish = "dist"
 
+# Vite 6 needs a current Node; this overrides any version left over from the old site.
+[build.environment]
+  NODE_VERSION = "22"
+
 # Hashed build assets never change; cache them for a year.
 [[headers]]
   for = "/assets/*"
