@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://portfolio-saravana.netlify.app/" />
+    <meta name="theme-color" content="#0b1020" />
+    <meta
+      name="description"
+      content="Saravana Kumar — full-stack developer and web designer in India, building React and Node products with AI integrations. Step into a 3D night studio."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfolio-saravana.netlify.app/" />
+    <meta property="og:title" content="Saravana Kumar · Full-stack developer, web designer & AI integrations" />
+    <meta
+      property="og:description"
+      content="A 3D night studio built in the browser. Meet Saravana, see the work, and say hello."
+    />
+    <meta property="og:image" content="https://portfolio-saravana.netlify.app/social-preview.png" />
+    <meta property="og:image:alt" content="Saravana's 3D studio: a character at a desk with glowing monitors" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Saravana Kumar · Full-stack developer, web designer & AI integrations" />
+    <meta name="twitter:description" content="A 3D night studio built in the browser." />
+    <meta name="twitter:image" content="https://portfolio-saravana.netlify.app/social-preview.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Saravana Kumar",
+        "url": "https://portfolio-saravana.netlify.app/",
+        "jobTitle": "Full-stack developer",
+        "worksFor": { "@type": "Organization", "name": "Mavdero Tech Services" },
+        "sameAs": [
+          "https://github.com/Saravanakumar1802",
+          "https://www.linkedin.com/in/s-saravanakumar-27aa78268/",
+          "https://twitter.com/SKLOGAN5"
+        ]
+      }
+    </script>
+    <title>Saravana Kumar · Full-stack developer, web designer & AI integrations</title>
+    <link rel="preload" href="/models/saravana.glb" as="fetch" crossorigin />
+    <style>
+      /* Paint the brand background and the loader's progress track before
+         CSS/JS arrive; the React loader takes over at the same spot. */
+      html,
+      body {
+        background: #0b1020;
+      }
+      #boot {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background:
+          radial-gradient(40% 40% at 50% 45%, rgb(124 196 255 / 0.084), transparent 70%),
+          radial-gradient(30% 30% at 58% 52%, rgb(232 54 79 / 0.084), transparent 70%), #0b1020;
+      }
+      #boot i {
+        position: absolute;
+        left: 50%;
+        bottom: 9vh;
+        width: min(18rem, 70vw);
+        height: 3px;
+        margin-left: max(-9rem, -35vw);
+        border-radius: 999px;
+        background: rgb(255 255 255 / 0.1);
+        overflow: hidden;
+      }
+      #boot i::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, transparent, #e8364f, transparent);
+        transform: translateX(-100%);
+        animation: boot 1.1s ease-in-out infinite;
+      }
+      @keyframes boot {
+        to {
+          transform: translateX(100%);
+        }
+      }
+    </style>
+    <noscript
+      ><style>
+        #boot {
+          display: none;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <div id="boot" aria-hidden="true"><i></i></div>
+    <div id="root"></div>
+    <noscript>
+      Saravana Kumar — full-stack developer, web designer and AI integrations. Please enable JavaScript to enter the 3D
+      studio, or email saravana1802kumar@gmail.com.
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
