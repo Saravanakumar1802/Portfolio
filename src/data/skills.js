@@ -1,0 +1,47 @@
+// Skills are rendered as keycaps on the 3D keyboard. `row`/`col` place them on the board.
+export const skillCategories = {
+  frontend: { label: 'Frontend', color: '#7cc4ff' },
+  backend: { label: 'Backend', color: '#e8364f' },
+  data: { label: 'Data', color: '#5ee0a8' },
+  design: { label: 'Design & motion', color: '#ffd166' },
+  tooling: { label: 'Tooling', color: '#b8c2e0' },
+}
+
+export const skills = [
+  { id: 'react', name: 'React', category: 'frontend', row: 1, col: 1, note: 'Component systems, hooks, state' },
+  { id: 'redux', name: 'Redux', category: 'frontend', row: 1, col: 2, note: 'Predictable app state' },
+  {
+    id: 'js',
+    name: 'JavaScript',
+    category: 'frontend',
+    row: 1,
+    col: 3,
+    wide: true,
+    note: 'ES2023+, the language of the web',
+  },
+  { id: 'html', name: 'HTML5', category: 'frontend', row: 1, col: 5, note: 'Semantic, accessible markup' },
+  { id: 'css', name: 'CSS3', category: 'frontend', row: 1, col: 6, note: 'Layout, animation, responsive' },
+  { id: 'tailwind', name: 'Tailwind', category: 'design', row: 1, col: 7, note: 'Utility-first design systems' },
+  { id: 'bootstrap', name: 'Bootstrap', category: 'frontend', row: 1, col: 8, note: 'Rapid UI scaffolding' },
+  { id: 'node', name: 'Node.js', category: 'backend', row: 2, col: 1, note: 'Services and tooling' },
+  { id: 'express', name: 'Express', category: 'backend', row: 2, col: 2, note: 'REST APIs and middleware' },
+  {
+    id: 'ai',
+    name: 'AI / LLMs',
+    category: 'backend',
+    row: 2,
+    col: 3,
+    wide: true,
+    note: 'PDF data extraction and contract analysis',
+  },
+  { id: 'mongodb', name: 'MongoDB', category: 'data', row: 2, col: 5, note: 'Document data modelling' },
+  { id: 'mysql', name: 'MySQL', category: 'data', row: 2, col: 6, note: 'Relational data and queries' },
+  { id: 'firebase', name: 'Firebase', category: 'data', row: 2, col: 7, note: 'Auth, storage and hosting' },
+  { id: 'figma', name: 'Figma', category: 'design', row: 3, col: 1, note: 'Interface design and prototyping' },
+  { id: 'gsap', name: 'GSAP', category: 'design', row: 3, col: 2, note: 'Choreographed motion' },
+  { id: 'three', name: 'Three.js', category: 'design', row: 3, col: 3, wide: true, note: 'Real-time 3D on the web' },
+  { id: 'python', name: 'Python', category: 'backend', row: 3, col: 8, note: 'Scripting, data and AI pipelines' },
+  { id: 'git', name: 'Git', category: 'tooling', row: 3, col: 5, note: 'Branching, reviews, history' },
+  { id: 'vscode', name: 'VS Code', category: 'tooling', row: 3, col: 6, note: 'Daily driver' },
+  { id: 'vite', name: 'Vite', category: 'tooling', row: 3, col: 7, note: 'Fast builds and dev server' },
+]
