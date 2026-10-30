@@ -67,8 +67,9 @@ export default function Hero() {
         })
         .to('.hero-copy', { autoAlpha: 0, y: -80, duration: 0.28 }, 0)
         .to('.hero-hud', { autoAlpha: 0, duration: 0.12 }, 0)
-        .fromTo('.hero-screen', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.14 }, 0.84)
-        .to({}, { duration: 0.02 })
+        // The About desktop then fades in on this wallpaper (see About).
+        .fromTo('.hero-screen', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12 }, 0.78)
+        .to({}, { duration: 0.1 })
     },
     { scope: section, dependencies: [reducedMotion] },
   )

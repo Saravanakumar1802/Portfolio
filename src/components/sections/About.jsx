@@ -130,17 +130,16 @@ export default function About() {
     () => {
       const mm = gsap.matchMedia()
       mm.add('(prefers-reduced-motion: no-preference)', () => {
-        // The desktop settles from a slight zoom, continuing the monitor dive.
-        gsap.fromTo(
-          '.os-desktop',
-          { scale: 1.08, y: 40 },
-          {
-            scale: 1,
-            y: 0,
-            ease: 'none',
-            scrollTrigger: { trigger: root.current, start: 'top bottom', end: 'top 25%', scrub: 0.6 },
-          },
-        )
+        // The section overlaps the last screen of the hero dive. It stays
+        // hidden while the camera flies in, then the desktop switches on over
+        // the monitor's wallpaper and settles from a slight zoom.
+        gsap
+          .timeline({
+            defaults: { ease: 'none' },
+            scrollTrigger: { trigger: root.current, start: 'top 18%', end: 'top top', scrub: 0.5 },
+          })
+          .fromTo(root.current, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.6 }, 0)
+          .fromTo('.os-desktop', { scale: 1.08, y: 40 }, { scale: 1, y: 0, duration: 1 }, 0)
         gsap.from('.os-window-inner', {
           scale: 0.88,
           autoAlpha: 0,
@@ -148,16 +147,17 @@ export default function About() {
           duration: 0.9,
           stagger: 0.1,
           ease: 'back.out(1.4)',
-          scrollTrigger: { trigger: '.os-desktop', start: 'top 70%', once: true },
+          scrollTrigger: { trigger: root.current, start: 'top 16%', once: true },
         })
         gsap.from('.sticky-note', {
           y: 60,
           autoAlpha: 0,
           clearProps: 'transform',
           duration: 0.9,
+          delay: 0.35,
           stagger: 0.1,
           ease: 'back.out(1.6)',
-          scrollTrigger: { trigger: '.os-desktop', start: 'top 45%', once: true },
+          scrollTrigger: { trigger: root.current, start: 'top 16%', once: true },
         })
       })
     },
@@ -180,7 +180,7 @@ export default function About() {
     )
 
   return (
-    <section id="about" ref={root} aria-labelledby="about-title" className="os-wallpaper relative overflow-hidden">
+    <section id="about" ref={root} aria-labelledby="about-title" className="os-wallpaper relative z-10 overflow-hidden motion-safe:-mt-[100svh]">
       <MenuBar />
       {/* Windows and notes can be dragged anywhere in this full-width area. */}
       <div data-drag-bounds className="relative">
