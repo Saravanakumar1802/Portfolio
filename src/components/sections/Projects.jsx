@@ -1,36 +1,16 @@
 import { useRef, useState } from 'react'
-import { FiArrowUpRight, FiGithub, FiServer, FiX, FiLock } from 'react-icons/fi'
+import { FiArrowUpRight, FiGithub, FiServer, FiX } from 'react-icons/fi'
 import { gsap, ScrollTrigger, useGSAP } from '../../lib/gsap'
 import { projects } from '../../data/projects'
 import SectionTitle from '../ui/SectionTitle'
 import { useTilt } from '../../hooks/useTilt'
+import BrowserChrome, { Shot } from '../ui/BrowserChrome'
+import Spotlight from './Spotlight'
 
 const flagship = projects.featured.filter((p) => p.tier === 'flagship')
 const lab = [...projects.featured.filter((p) => p.tier !== 'flagship'), ...projects.mini]
 const STACK_TOP = 88
 const STACK_STEP = 26
-
-const hostOf = (url) => {
-  try {
-    return new URL(url).host
-  } catch {
-    return url
-  }
-}
-
-function Shot({ image, alt, sizes, eager = false, className = '' }) {
-  return (
-    <img
-      src={image.sm}
-      srcSet={`${image.sm} 640w, ${image.lg} 1280w`}
-      sizes={sizes}
-      alt={alt}
-      loading={eager ? 'eager' : 'lazy'}
-      decoding="async"
-      className={className}
-    />
-  )
-}
 
 function Links({ project }) {
   return (
@@ -46,28 +26,6 @@ function Links({ project }) {
           <FiServer aria-hidden="true" /> Server
         </a>
       )}
-    </div>
-  )
-}
-
-function BrowserChrome({ url, children, className = '' }) {
-  return (
-    <div
-      className={`overflow-hidden rounded-[1.4rem] border border-line bg-surface shadow-[0_40px_90px_-30px_rgb(0_0_0/0.85)] ${className}`}
-    >
-      <div className="flex items-center gap-3 border-b border-line bg-raised/80 px-4 py-3">
-        <span className="flex gap-1.5" aria-hidden="true">
-          <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
-          <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
-          <span className="h-3 w-3 rounded-full bg-[#28c840]" />
-        </span>
-        <span className="mx-auto flex min-w-0 max-w-md flex-1 items-center justify-center gap-2 rounded-lg bg-midnight/70 px-3 py-1.5 font-mono text-[0.72rem] text-muted">
-          <FiLock aria-hidden="true" className="shrink-0 text-mint" />
-          <span className="truncate">{hostOf(url)}</span>
-        </span>
-        <span className="hidden w-[52px] sm:block" aria-hidden="true" />
-      </div>
-      {children}
     </div>
   )
 }
@@ -175,19 +133,23 @@ export default function Projects() {
       const cards = gsap.utils.toArray('.stack-card')
       const mm = gsap.matchMedia()
       mm.add('(min-width: 1024px) and (prefers-reduced-motion: no-preference)', () => {
-        // Each window sinks back as the next one slides over it.
+        // Each window sinks back and dims as the next one slides over it. The
+        // dimming is a shade layer's opacity (not a CSS filter), so it starts
+        // from fully lit and runs on the compositor without repainting.
         cards.slice(0, -1).forEach((card, i) => {
-          gsap.to(card.querySelector('.project-window'), {
-            scale: 0.9 + i * 0.02,
-            filter: 'brightness(0.45) saturate(0.7)',
-            ease: 'none',
-            scrollTrigger: {
-              trigger: cards[i + 1],
-              start: 'top bottom',
-              end: `top ${STACK_TOP + (i + 1) * STACK_STEP}px`,
-              scrub: true,
-            },
-          })
+          const win = card.querySelector('.project-window')
+          gsap
+            .timeline({
+              defaults: { ease: 'none' },
+              scrollTrigger: {
+                trigger: cards[i + 1],
+                start: 'top bottom',
+                end: `top ${STACK_TOP + (i + 1) * STACK_STEP}px`,
+                scrub: 0.3,
+              },
+            })
+            .fromTo(win, { scale: 1 }, { scale: 0.9 + i * 0.02 }, 0)
+            .fromTo(win.querySelector('.stack-shade'), { opacity: 0 }, { opacity: 0.55, ease: 'power1.in' }, 0)
         })
       })
       mm.add('(prefers-reduced-motion: no-preference)', () => {
@@ -221,6 +183,8 @@ export default function Projects() {
           intro="Full-stack products with real users in mind — each one built end to end, from interface to API to database."
         />
 
+        <Spotlight />
+
         <div className="mt-16">
           {flagship.map((project, i) => (
             <div
@@ -228,8 +192,12 @@ export default function Projects() {
               className="stack-card mb-10 last:mb-0 lg:sticky lg:mb-[14vh]"
               style={{ top: STACK_TOP + i * STACK_STEP }}
             >
-              <div className="project-window origin-top will-change-transform">
+              <div className="project-window relative origin-top will-change-transform">
                 <FlagshipCard project={project} index={i} />
+                <span
+                  aria-hidden="true"
+                  className="stack-shade pointer-events-none absolute inset-0 rounded-[1.4rem] bg-midnight opacity-0"
+                />
               </div>
             </div>
           ))}

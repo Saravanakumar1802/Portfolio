@@ -23,7 +23,48 @@ import todoListLg from '../assets/optimized/todo-list-1280.webp'
 import gamingPageSm from '../assets/optimized/gaming-page-640.webp'
 import gamingPageLg from '../assets/optimized/gaming-page-1280.webp'
 
+import jobHuntSm from '../assets/optimized/job-hunt-copilot-640.webp'
+import jobHuntLg from '../assets/optimized/job-hunt-copilot-1280.webp'
+import jhcHowSm from '../assets/optimized/jhc-how-it-works-640.webp'
+import jhcHowLg from '../assets/optimized/jhc-how-it-works-1280.webp'
+import jhcMatchesSm from '../assets/optimized/jhc-matches-640.webp'
+import jhcMatchesLg from '../assets/optimized/jhc-matches-1280.webp'
+import jhcDraftSm from '../assets/optimized/jhc-hr-draft-640.webp'
+import jhcDraftLg from '../assets/optimized/jhc-hr-draft-1280.webp'
+import jhcTrackerSm from '../assets/optimized/jhc-tracker-640.webp'
+import jhcTrackerLg from '../assets/optimized/jhc-tracker-1280.webp'
+import jhcUsageSm from '../assets/optimized/jhc-usage-640.webp'
+import jhcUsageLg from '../assets/optimized/jhc-usage-1280.webp'
+
 const shot = (sm, lg) => ({ sm, lg })
+
+// The newest build, shown as a case study above the stacked windows.
+export const spotlight = {
+  id: 'job-hunt-copilot',
+  kind: 'AI job-search assistant',
+  badge: 'New · AI agents',
+  title: 'Job Hunt Copilot',
+  description:
+    'Enter a role and your skills, and five agents search live LinkedIn and Naukri postings, score each job against your skills and rank them — then draft the message to HR for you.',
+  note: 'Runs entirely on free tiers.',
+  image: shot(jobHuntSm, jobHuntLg),
+  preview: '/projects/job-hunt-copilot/preview.mp4',
+  video: '/projects/job-hunt-copilot/demo.mp4',
+  videoLength: '1:50',
+  repo: 'https://github.com/Saravanakumar1802/jobhunt-agent',
+  demo: 'https://jobhunt-agent-1.onrender.com/',
+  stack: ['React 19', 'FastAPI', 'LangGraph', 'LiteLLM', 'MongoDB Atlas', 'Three.js', 'GSAP'],
+  // The agent pipeline, in order; the last step is what you get back.
+  agents: ['Search', 'Pre-filter', 'Analyse', 'Match', 'Rank'],
+  output: 'Draft to HR',
+  gallery: [
+    { image: shot(jhcHowSm, jhcHowLg), caption: 'How it works — search, shortlist, read, rank' },
+    { image: shot(jhcMatchesSm, jhcMatchesLg), caption: 'Ranked matches with skill gaps and AI reasoning' },
+    { image: shot(jhcDraftSm, jhcDraftLg), caption: 'One click drafts the message to HR' },
+    { image: shot(jhcTrackerSm, jhcTrackerLg), caption: 'Save jobs and track every application' },
+    { image: shot(jhcUsageSm, jhcUsageLg), caption: 'Free-tier quotas and model usage, tracked live' },
+  ],
+}
 
 export const projects = {
   featured: [
